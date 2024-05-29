@@ -35,7 +35,7 @@ The project utilizes the following AWS services:
 
 ## Data Pipeline Architecture
 
-![Data Pipeline Architecture](Data Pipeline Diagaram.PNG)
+![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
 
 The data pipeline architecture involves the following steps:
 
