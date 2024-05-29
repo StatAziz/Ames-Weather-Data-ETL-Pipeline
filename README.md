@@ -35,7 +35,7 @@ The project utilizes the following AWS services:
 
 ## Data Pipeline Architecture
 
-![Data Pipeline Architecture]("Data Pipeline Diagaram.PNG")
+![Data Pipeline Architecture](Data Pipeline Diagaram.PNG)
 
 The data pipeline architecture involves the following steps:
 
