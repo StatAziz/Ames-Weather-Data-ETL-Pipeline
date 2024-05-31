@@ -19,16 +19,20 @@ The dataset includes weather data for Ames, Iowa from March 1, 2024, to April 30
 | precipitation_sum    | float     | Total precipitation in millimeters (mm)          |
 | rain_sum             | float     | Total rain in millimeters (mm)                   |
 | wind_speed           | float     | Wind speed in meters per second (km/hr)            |
-
-
 </br>
 </br>
 
-## Questions to Answer
+## Visual overview of data
+The following chart (based on open-meteo API) provides overall summary of the data variables:
+![Visual overview of data](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/4d5d69b6552edfcc53941ae3dd41a7dc37d46883/open-meteo-api-chart.PNG)
+</br>
+</br>
+
+## key Questions to Answer
 
 1. What was the average temperature in Ames, Iowa during March and April 2024?
 2. How did the duration of daylight and sunshine vary throughout these months?
-3. What were the total precipitation and rain sums?
+3. What were the total precipitation and rain sums during this period?
 4. What was the average wind speed during this period?
 
 </br>
@@ -38,13 +42,14 @@ The dataset includes weather data for Ames, Iowa from March 1, 2024, to April 30
 
 The project utilizes the following AWS services:
 
-- **S3**: Used for storing raw and processed data.
-- **Lambda Function**: Automates the data collection process from the Open-Meteo API.
-- **Kinesis Firehose**: Streams the collected data into S3.
-- **Glue Crawler**: Crawls the data in S3 and creates a metadata catalog.
-- **Athena**: Queries the data stored in S3.
-- **Glue Jobs**: Processes and transforms the data.
-- **Glue Airflows**: Orchestrates the workflow of the data pipeline.
+- **S3**: Used for storing raw and processed weather data.
+- **Lambda Function**: Automated the data collection process by invoking the Open-Meteo API on demand.
+- **Kinesis Firehose**: Streamed the collected weather data into specific S3 bucket on real-time.
+- **Glue Crawler**: Scanned data in S3, identified its schema and created metadata catalog available for querying using AWS Athena.
+- **Athena**: Used to run queries on the processed weather data stored in S3.
+- **Glue Jobs**: Processed and transformed the data (performed serverless ETL functions).
+- **Glue Airflows**: Orchestrated the workflow of the entire data pipeline, ensuring all tasks are executed in the correct order. 
+- **Grafana Lab**: Used to produce dashboards based on the final processed data queried from Athena, providing interactive and visually appealing insights.
 
 </br>
 </br>
