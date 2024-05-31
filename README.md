@@ -74,7 +74,7 @@ The data pipeline architecture involves the following steps:
 
 The project includes a dashboard that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
 
-![Dashboard Image 1](Dashboard.PNG)
+![Dashboard Image 1](Dashboard1.PNG)
 
 </br>
 </br>
