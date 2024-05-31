@@ -2,7 +2,15 @@
 
 ## Brief Project Description
 
-This project provides an in-depth overview of the weather in Ames, Iowa for the months of March and April 2024. The data was collected using the Open-Meteo API, an open-source weather API, and processed through a data pipeline built using various AWS services. The project includes analysis of key weather variables and the creation of a comprehensive dashboard to visualize the findings.
+This project delves into the weather patterns of Ames, Iowa, specifically focusing on the months of March and April 2024. Our aim is to gain insights into various key weather variables during this period. To achieve this, we employed a systematic approach, starting with data collection using the Open-Meteo API, a reliable source of weather data. The collected data was then processed through a robust data pipeline built on AWS infrastructure.
+
+In the data collection phase, we utilized AWS Lambda and Kinesis Firehose to ingest the weather data into our system. AWS Lambda, triggered by an EventBridge schedule, periodically fetched the latest weather information from the Open-Meteo API. This data was then streamed into an S3 bucket using Kinesis Firehose, ensuring efficient and real-time data ingestion.
+
+Once the data was ingested, we focused on transforming it into a usable format for analysis. This involved the use of AWS Glue, where Glue Crawler automatically scanned the data in the S3 bucket, identifying its schema and structure. The metadata catalog created by Glue Crawler facilitated smooth data processing and transformation through Glue Jobs. These jobs cleaned, enriched, and structured the data, preparing it for further analysis.
+
+For querying the processed data, we turned to Amazon Athena, a powerful and serverless query service. With Athena, we could run SQL queries directly on the data stored in S3, allowing for seamless and efficient data analysis.
+
+The significance of this project lies in the insights it uncovers regarding local climate conditions in Ames, Iowa. By analyzing key weather variables such as average temperatures, daylight and sunshine duration, and precipitation amounts, we gain valuable information about the weather patterns during March and April 2024. These insights have implications for various sectors, including agriculture, transportation, and urban planning.
 </br>
 </br>
 
@@ -12,13 +20,13 @@ The dataset includes weather data for Ames, Iowa from March 1, 2024, to April 30
 | Column Name          | Data Type | Description                                      |
 |----------------------|-----------|--------------------------------------------------|
 | time            | datetime  | The date and time of the recorded data point     |
-| temperature_celsius  | float     | Temperature measured in degrees Celsius (°C)     |
-| temperature_fahrenheit | float   | Temperature measured in degrees Fahrenheit (°F)  |
-| daylight_duration    | float     | Duration of daylight in hours                    |
-| sunshine_duration    | float     | Duration of sunshine in hours                    |
+| temperature_celsius  | float     | Temperature (at 2 meters abover the ground) in degrees Celsius (°C)     |
+| temperature_fahrenheit | float   | Temperature (at 2 meters abover the ground) in degrees Fahrenheit (°F)  |
+| daylight_duration    | float     | Duration of daylight in seconds (s)                   |
+| sunshine_duration    | float     | Duration of sunshine in seconds (s)                   |
 | precipitation_sum    | float     | Total precipitation in millimeters (mm)          |
-| rain_sum             | float     | Total rain in millimeters (mm)                   |
-| wind_speed           | float     | Wind speed in meters per second (km/hr)            |
+| rain_sum             | float     | Total rainfall in millimeters (mm)                   |
+| wind_speed           | float     | Maximum wind speed (at 10 meters abover the ground) in kilometers per hour (km/hr)            |
 </br>
 </br>
 
@@ -30,10 +38,12 @@ The following chart (based on open-meteo API) provides overall summary of the da
 
 ## key Questions to Answer
 
-1. What was the average temperature in Ames, Iowa during March and April 2024?
-2. How did the duration of daylight and sunshine vary throughout these months?
-3. What were the total precipitation and rain sums during this period?
-4. What was the average wind speed during this period?
+1. What were the average temperatures in Ames, Iowa, during March and April 2024?
+2. How did daylight duration change between March and April 2024?
+3. What was the trend in sunshine duration over these two months?
+4. How much rain fell in March and April 2024, and how did the amounts compare between the two months?
+5. What were the total precipitation sums for March and April 2024?
+6. How did wind speeds vary between March and April 2024?
 
 </br>
 </br>
@@ -58,14 +68,27 @@ The project utilizes the following AWS services:
 
 ![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
 
-The data pipeline architecture involves the following steps:
+## Data Pipeline Architecture
 
-1. **Data Collection**: AWS Lambda function triggers the Open-Meteo API to collect weather data.
-2. **Data Streaming**: Data is streamed into an S3 bucket using Kinesis Firehose.
-3. **Data Crawling**: Glue Crawler scans the data in S3 and creates a metadata catalog.
-4. **Data Processing**: Glue Jobs process and transform the data as needed.
-5. **Data Querying**: Athena is used to query the processed data for analysis.
-6. **Workflow Orchestration**: Glue Airflows orchestrates the entire workflow, ensuring smooth execution of each step.
+### 1) Data Ingestion
+- **Data Collection**: 
+  - **AWS Lambda**: An AWS Lambda function is used to collect weather data from the Open-Meteo API. This function is triggered by an **Amazon EventBridge** schedule, ensuring the data is collected at regular intervals.
+- **Data Streaming**: 
+  - **Amazon Kinesis Data Firehose**: The collected weather data is streamed into an Amazon S3 bucket using Amazon Kinesis Data Firehose. This service handles the real-time data ingestion, allowing for efficient and reliable delivery of streaming data into S3.
+
+### 2) Data Transformation
+- **Data Crawling**: 
+  - **AWS Glue Crawler**: The AWS Glue Crawler scans the data stored in the S3 bucket. It automatically detects the schema and partitions of the data, and then creates a metadata catalog in the **AWS Glue Data Catalog**. This catalog makes the data easily accessible for querying and further processing.
+- **Data Processing**: 
+  - **AWS Glue Jobs**: AWS Glue Jobs are utilized to process and transform the ingested data. These ETL (Extract, Transform, Load) jobs clean, enrich, and structure the data according to the project's requirements, preparing it for analysis.
+- **Data Logging**: 
+  - **Amazon CloudWatch Logs**: CloudWatch Logs monitor and log the activity and status of the various AWS services used in the pipeline. This helps in troubleshooting and ensuring the smooth operation of the data pipeline.
+- **Data Querying**: 
+  - **Amazon Athena**: Amazon Athena is used to run SQL queries on the processed data stored in S3. It provides a serverless, interactive query service that makes it easy to analyze data directly in S3 using standard SQL.
+
+### 3) Visualization
+- **Dashboard**: 
+  - **Grafana**: Grafana is connected to Amazon Athena to create dashboards based on the queried data. This open-source analytics and monitoring platform provides powerful visualization tools, enabling the creation of interactive and informative dashboards that present the analyzed weather data in an easily interpretable format.
 
 </br>
 </br>
@@ -81,10 +104,12 @@ The project includes a dashboard that visualizes the collected and processed dat
 
 ## Key Findings
 
-- The average temperature in Ames, Iowa for March and April 2024 was X°C (Y°F).
-- Daylight and sunshine duration showed a gradual increase from March to April.
-- The total precipitation and rain sums were Z mm and W mm, respectively.
-- The average wind speed during these months was V m/s.
+- The average temperatures (at 2 meters above the ground) in Ames, Iowa, for March and April 2024 were 31.4°F and 41.9°F, respectively.
+- Daylight duration showed a gradual increase on average from March (11.9 hr) to April (13.4 hr).
+- Sunshine duration also showed a slow, gradual increase on average from March (7.38 hours) to April (7.92 hours).
+- The total rain sums were 339.3 mm in March 1160.1 mm in April, respectively.
+- The total precipitation sums were 226.2 mm in March and 773.4 mm in April, respectively.
+- The average maximum wind speed (at 10 meters above the ground) was 26.8 km/hr in March and 30.34 km/hr in April.
 
 </br>
 </br>
