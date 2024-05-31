@@ -1,6 +1,6 @@
 # Ames-Weather-March-April-2024
 
-## Brief Project Description
+## Project Description
 
 This project delves into the weather patterns of Ames, Iowa, specifically focusing on the months of March and April 2024. Our aim is to gain insights into various key weather variables during this period. To achieve this, we employed a systematic approach, starting with data collection using the Open-Meteo API, a reliable source of weather data. The collected data was then processed through a robust data pipeline built on AWS infrastructure.
 
