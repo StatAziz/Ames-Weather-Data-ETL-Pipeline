@@ -130,8 +130,8 @@ The project includes a dashboard that visualizes the collected and processed dat
 ## Limitations
 
 - The data is limited to two months, which may not provide a comprehensive overview of long-term weather trends.
-- Potential inaccuracies in the weather API data due to sensor errors or data processing issues.
-- Limited variables collected; additional variables like humidity and pressure could enhance the analysis.
+- In the raw data, we observed that the daily precipitation sum is lower than the rain sum, contradicting their definitions and necessitating further investigation.
+- Limited variables collected; additional variables like humidity and pressure could enhance the significance of the project.
 </br>
 </br>
 
