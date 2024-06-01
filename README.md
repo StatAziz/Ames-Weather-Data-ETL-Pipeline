@@ -2,15 +2,15 @@
 
 ## Project Description
 
-This project delves into the weather patterns of Ames, Iowa, specifically focusing on the months of March and April 2024. Our aim is to gain insights into various key weather variables during this period. To achieve this, we employed a systematic approach, starting with data collection using the Open-Meteo API, a reliable source of weather data. The collected data was then processed through a robust data pipeline built on AWS infrastructure.
+This project delves into the weather patterns of Ames, Iowa, specifically focusing on the months of March and April 2024. Our aim is to gain insights into various key weather variables during this period. To achieve this, we employed a systematic approach, starting with data collection using the Open-Meteo API, a reliable open source of weather data. The collected data was then processed through a robust data pipeline built on AWS infrastructure.
 
 In the data collection phase, we utilized AWS Lambda and Kinesis Firehose to ingest the weather data into our system. AWS Lambda, triggered by an EventBridge schedule, periodically fetched the latest weather information from the Open-Meteo API. This data was then streamed into an S3 bucket using Kinesis Firehose, ensuring efficient and real-time data ingestion.
 
 Once the data was ingested, we focused on transforming it into a usable format for analysis. This involved the use of AWS Glue, where Glue Crawler automatically scanned the data in the S3 bucket, identifying its schema and structure. The metadata catalog created by Glue Crawler facilitated smooth data processing and transformation through Glue Jobs. These jobs cleaned, enriched, and structured the data, preparing it for further analysis.
 
-For querying the processed data, we turned to Amazon Athena, a powerful and serverless query service. With Athena, we could run SQL queries directly on the data stored in S3, allowing for seamless and efficient data analysis.
+For querying the processed data, we turned to Amazon Athena, a powerful and serverless query service. With Athena, we ran SQL queries directly on the data stored in S3, allowing for seamless and efficient data analysis.
 
-The significance of this project lies in the insights it uncovers regarding local climate conditions in Ames, Iowa. By analyzing key weather variables such as average temperatures, daylight and sunshine duration, and precipitation amounts, we gain valuable information about the weather patterns during March and April 2024. These insights have implications for various sectors, including agriculture, transportation, and urban planning.
+The significance of this project lies in the insights it uncovers regarding local climate conditions in Ames, Iowa. By analyzing key weather variables such as average temperatures, daylight and sunshine duration, and precipitation amounts, we gain valuable information about the weather patterns during March and April 2024. These insights have implications for various sectors, including agriculture, tourism, transportation, and urban planning.
 </br>
 </br>
 
@@ -30,7 +30,7 @@ The dataset includes weather data for Ames, Iowa from March 1, 2024, to April 30
 </br>
 </br>
 
-## Visual overview of data
+## Visual Overview of Data
 The following chart (based on open-meteo API) provides overall summary of the data variables:
 ![Visual overview of data](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/4d5d69b6552edfcc53941ae3dd41a7dc37d46883/open-meteo-api-chart.PNG)
 </br>
@@ -122,8 +122,6 @@ The project includes a dashboard that visualizes the collected and processed dat
 </br>
 </br>
 
-## To Replicate
+## Acknowledgement
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/yourusername/Ames-Weather-March-April-2024.git
+I would like to express my sincere gratitude to David Freitag for his invaluable guidance and support throughout the completion of this project. His expertise and insights have been instrumental in navigating the complexities of weather data analysis and AWS services. 
