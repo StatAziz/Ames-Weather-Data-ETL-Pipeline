@@ -1,5 +1,18 @@
 # Ames-Weather-March-April-2024
+# Table of Contents
 
+1. [Project Description](#project-description)
+2. [Weather Data Variables](#weather-data-variables)
+3. [Visual Overview of Data](#visual-overview-of-data)
+4. [key Questions to Answer](#key-questions-to-answer)
+5. [Tech Stack](#tech-stack)
+6. [Data Pipeline Architecture Diagram](#data-pipeline-architecture-diagram)
+7. [Data Pipeline Architecture Description](#data-pipeline-architecture-description)
+8. [Dashboard](#dashboard)
+9. [Key Findings](#key-findings)
+10. [Limitations](#limitations)
+11. [Acknowledgement](#acknowledgement)
+   
 ## Project Description
 
 This project delves into the weather patterns of Ames, Iowa, specifically focusing on the months of March and April 2024. Our aim is to gain insights into various key weather variables during this period. To achieve this, we employed a systematic approach, starting with data collection using the Open-Meteo API, a reliable open source of weather data. The collected data was then processed through a robust data pipeline built on AWS infrastructure.
@@ -64,11 +77,11 @@ The project utilizes the following AWS services:
 </br>
 </br>
 
-## Data Pipeline Architecture
+## Data Pipeline Architecture Diagram
 
 ![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
 
-## Data Pipeline Architecture
+## Data Pipeline Architecture Description
 
 ### 1) Data Ingestion
 - **Data Collection**: 
