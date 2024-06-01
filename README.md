@@ -138,3 +138,9 @@ The project includes a dashboard that visualizes the collected and processed dat
 ## Acknowledgement
 
 I would like to express my sincere gratitude to David Freitag for his invaluable guidance and support throughout the completion of this project. His expertise and insights have been instrumental in navigating the complexities of weather data analysis and AWS services. 
+</br>
+</br>
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
