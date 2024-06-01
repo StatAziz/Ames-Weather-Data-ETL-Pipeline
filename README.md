@@ -94,7 +94,7 @@ The project utilizes the following AWS services:
 - **Data Crawling**: 
   - **AWS Glue Crawler**: The AWS Glue Crawler scans the data stored in the S3 bucket. It automatically detects the schema and partitions of the data, and then creates a metadata catalog in the **AWS Glue Data Catalog**. This catalog makes the data easily accessible for querying and further processing.
 - **Data Processing**: 
-  - **AWS Glue Jobs**: AWS Glue Jobs are utilized to process and transform the ingested data. These ETL (Extract, Transform, Load) jobs clean, enrich, and structure the data according to the project's requirements, preparing it for analysis.
+  - **AWS Glue Jobs**: AWS Glue Jobs are utilized to process and transform the ingested data. These ETL (Extract, Transform, Load) jobs clean, enrich, and structure the data according to the project's requirements, preparing it for analysis. In this project we performed four Glue Jobs: deleting old parquet table, creating new parquet table, quality checking of the parquet table (if any null value exhists) and publishing final production parquet table.
 - **Data Logging**: 
   - **Amazon CloudWatch Logs**: CloudWatch Logs monitor and log the activity and status of the various AWS services used in the pipeline. This helps in troubleshooting and ensuring the smooth operation of the data pipeline.
 - **Data Querying**: 
@@ -109,7 +109,7 @@ The project utilizes the following AWS services:
 
 ## Dashboard
 
-The project includes a dashboard ([Grafan:snapshot](https://azizulislam1404.grafana.net/dashboard/snapshot/xJZkpdG4dRN6zIwJRsaK1EeQQIR3aToO)) that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
+The project includes a dashboard ([Grafana:Snapshot](https://azizulislam1404.grafana.net/dashboard/snapshot/xJZkpdG4dRN6zIwJRsaK1EeQQIR3aToO)) that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
 
 ![Dashboard Image 1](Dashboard2.PNG)
 
