@@ -110,7 +110,7 @@ The project utilizes the following AWS services:
 
 The project includes a dashboard that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
 
-![Dashboard Image 1](Dashboard1.PNG)
+![Dashboard Image 1](Dashboard2.PNG)
 
 </br>
 </br>
