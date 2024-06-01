@@ -6,7 +6,7 @@
 3. [Visual Overview of Data](#visual-overview-of-data)
 4. [key Questions to Answer](#key-questions-to-answer)
 5. [Tech Stack](#tech-stack)
-6. [Data Pipeline Architecture Diagram](#data-pipeline-architecture-diagram)
+6. [Data Pipeline Architecture](#data-pipeline-architecture)
 7. [Data Pipeline Description](#data-pipeline-description)
 8. [Dashboard](#dashboard)
 9. [Key Findings](#key-findings)
@@ -77,7 +77,7 @@ The project utilizes the following AWS services:
 </br>
 </br>
 
-## Data Pipeline Architecture Diagram
+## Data Pipeline Architecture
 
 ![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
 
