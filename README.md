@@ -12,6 +12,7 @@
 9. [Key Findings](#key-findings)
 10. [Limitations](#limitations)
 11. [Acknowledgement](#acknowledgement)
+12. [License](#license)
    
 ## Project Description
 
