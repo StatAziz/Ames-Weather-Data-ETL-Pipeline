@@ -100,7 +100,7 @@ The project utilizes the following AWS services:
 - **Data Querying**: 
   - **Amazon Athena**: Amazon Athena is used to run SQL queries on the processed data stored in S3. It provides a serverless, interactive query service that makes it easy to analyze data directly in S3 using standard SQL.
 
-### 3) Visualization
+### 3) Data Visualization
 - **Dashboard**: 
   - **Grafana**: Grafana is connected to Amazon Athena to create dashboards based on the queried data. This open-source analytics and monitoring platform provides powerful visualization tools, enabling the creation of interactive and informative dashboards that present the analyzed weather data in an easily interpretable format.
 
