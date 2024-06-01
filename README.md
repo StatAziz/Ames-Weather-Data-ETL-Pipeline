@@ -7,7 +7,7 @@
 4. [key Questions to Answer](#key-questions-to-answer)
 5. [Tech Stack](#tech-stack)
 6. [Data Pipeline Architecture Diagram](#data-pipeline-architecture-diagram)
-7. [Data Pipeline Architecture Description](#data-pipeline-architecture-description)
+7. [Data Pipeline Description](#data-pipeline-description)
 8. [Dashboard](#dashboard)
 9. [Key Findings](#key-findings)
 10. [Limitations](#limitations)
@@ -81,7 +81,7 @@ The project utilizes the following AWS services:
 
 ![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
 
-## Data Pipeline Architecture Description
+## Data Pipeline Description
 
 ### 1) Data Ingestion
 - **Data Collection**: 
