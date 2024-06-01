@@ -109,7 +109,7 @@ The project utilizes the following AWS services:
 
 ## Dashboard
 
-The project includes a dashboard that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
+The project includes a dashboard ([Grafan:snapshot](https://azizulislam1404.grafana.net/dashboard/snapshot/xJZkpdG4dRN6zIwJRsaK1EeQQIR3aToO)) that visualizes the collected and processed data. The dashboard provides insights into various weather parameters over the specified period.
 
 ![Dashboard Image 1](Dashboard2.PNG)
 
