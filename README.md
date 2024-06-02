@@ -121,7 +121,7 @@ The project includes a dashboard ([Grafana:Snapshot](https://azizulislam1404.gra
 - The average temperatures (at 2 meters above the ground) in Ames, Iowa, for March and April 2024 were 31.4°F and 41.9°F, respectively.
 - Daylight duration showed a gradual increase on average from March (11.9 hr) to April (13.4 hr).
 - Sunshine duration also showed a slow, gradual increase on average from March (7.38 hours) to April (7.92 hours).
-- The total rain sums were 339.3 mm in March 1160.1 mm in April, respectively.
+- The total rain sums were 339.3 mm in March and 1160.1 mm in April, respectively.
 - The total precipitation sums were 226.2 mm in March and 773.4 mm in April, respectively.
 - The average maximum wind speed (at 10 meters above the ground) was 26.8 km/hr in March and 30.34 km/hr in April.
 
