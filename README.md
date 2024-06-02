@@ -46,7 +46,7 @@ The dataset includes weather data for Ames, Iowa from March 1, 2024, to April 30
 
 ## Visual Overview of Data
 The following chart (based on open-meteo API) provides overall summary of the data variables:
-![Visual overview of data](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/4d5d69b6552edfcc53941ae3dd41a7dc37d46883/open-meteo-api-chart.PNG)
+![Visual overview of data](open-meteo-api-chart.PNG)
 </br>
 </br>
 
@@ -80,7 +80,7 @@ The project utilizes the following AWS services:
 
 ## Data Pipeline Architecture
 
-![Data Pipeline Architecture](https://github.com/StatAziz/Ames-Weather-March-April-2024/blob/main/Data%20Pipeline%20Diagaram.PNG)
+![Data Pipeline Architecture](Data-Pipeline-Diagaram.PNG)
 
 ## Data Pipeline Description
 
