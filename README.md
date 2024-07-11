@@ -72,7 +72,7 @@ The project utilizes the following AWS services:
 - **Glue Crawler**: Scanned data in S3, identified its schema and created metadata catalog available for querying using AWS Athena.
 - **Athena**: Used to run queries on the processed weather data stored in S3.
 - **Glue Jobs**: Processed and transformed the data (performed serverless ETL functions).
-- **Glue Airflows**: Orchestrated the workflow of the entire data pipeline, ensuring all tasks are executed in the correct order. 
+- **Glue Workflows**: Orchestrated the workflow of the entire data pipeline, ensuring all tasks are executed in the correct order. 
 - **Grafana Lab**: Used to produce dashboards based on the final processed data queried from Athena, providing interactive and visually appealing insights.
 
 </br>
