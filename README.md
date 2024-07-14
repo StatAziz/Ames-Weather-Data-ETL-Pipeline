@@ -1,4 +1,4 @@
-# Ames-Weather-March-April-2024
+# Ames Weather Data ETL Pipeline
 # Table of Contents
 
 1. [Project Description](#project-description)
