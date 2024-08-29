@@ -1,3 +1,5 @@
+![Cover photo](Cover_photo.gif)
+
 # Ames Weather Data ETL Pipeline
 # Table of Contents
 
