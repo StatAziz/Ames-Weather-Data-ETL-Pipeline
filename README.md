@@ -140,7 +140,7 @@ The project includes a dashboard ([Grafana:Snapshot](https://azizulislam1404.gra
 
 ## Acknowledgement
   
-I would like to express my sincere gratitude to David Freitag for his invaluable guidance and support throughout the completion of this project. His expertise and insights have been instrumental in navigating the complexities of weather data analysis and AWS services :clap: :clap: 
+I would like to express my sincere gratitude to David Freitag for his invaluable advice and support throughout the completion of this project. His expertise and insights have been instrumental in navigating the complexities of weather data analysis and AWS services :clap: :clap: 
 </br>
 </br>
 ## License
